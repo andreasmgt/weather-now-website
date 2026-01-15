@@ -1,0 +1,237 @@
+.highlights-section {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 28px;
+  padding: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.highlight-card {
+  border-radius: 20px;
+  padding: 25px;
+  transition: transform 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Air Quality Card */
+.air-quality-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-header h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.aqi-badge {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.card-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.card-icon {
+  opacity: 0.9;
+}
+
+.aqi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  flex: 1;
+}
+
+.aqi-item {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.aqi-label {
+  display: block;
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+.aqi-value {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Sunrise Card */
+.sunrise-card {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.sun-times {
+  display: flex;
+  gap: 20px;
+}
+
+.sun-time-item {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.time-value {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Small Cards Grid */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.small-card {
+  color: white;
+  min-height: 120px;
+}
+
+.humidity-card {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.pressure-card {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.visibility-card {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.feels-card {
+  background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+}
+
+.small-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card-label {
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.card-value-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.card-value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+
+  .right-section {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .dashboard-content {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .forecast-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .temp-value {
+    font-size: 72px;
+  }
+
+  .location-info h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .main-weather-card,
+  .forecast-section,
+  .highlights-section {
+    padding: 20px;
+  }
+
+  .forecast-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .temp-value {
+    font-size: 64px;
+  }
+}
